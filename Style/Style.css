@@ -1,0 +1,138 @@
+* {
+  font-family: "Poppins";
+}
+
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #dde5f4;
+  height: 100vh;
+}
+
+.contenedor {
+  background: #f1f7fe;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  box-shadow: 0 0 2em #e6e9f9;
+  gap: 2em;
+}
+
+.contenedor .img {
+  width: 50%;
+  margin-left: 35%;
+}
+
+.contenedor img {
+  border-radius: 50%;
+  width: 50%;
+  height: 45%;
+}
+
+.contenedor .email {
+  font-size: 1.1em;
+  background: white;
+  box-shadow: 0 0 2em #e6e9f9;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  border-radius: 20px;
+  color: #4d4d4d;
+}
+
+.contenedor .email input {
+  font-size: 1em;
+  outline: none;
+  border: none;
+}
+
+.contenedor .email input::placeholder,
+.contenedor .email input::-moz-placeholder,
+.contenedor .email input:-ms-input-placeholder {
+  color: black;
+  font-size: 1.1em;
+}
+
+.contenedor .email ion-icon {
+  color: #4d4d4d;
+  margin-bottom: -0.2em;
+}
+
+.contenedor .password {
+  font-size: 1.1em;
+  background: white;
+  box-shadow: 0 0 2em #e6e9f9;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  border-radius: 20px;
+  color: #4d4d4d;
+}
+
+.contenedor .password input {
+  font-size: 1em;
+  outline: none;
+  border: none;
+}
+
+.contenedor .password input::placeholder,
+.contenedor .password input::-moz-placeholder,
+.contenedor .password input:-ms-input-placeholder {
+  color: black;
+  font-size: 01.1em;
+}
+
+.contenedor .password ion-icon {
+  color: #4d4d4d;
+  margin-bottom: -0.2em;
+}
+
+.contenedor .password .show-hide {
+  margin-right: -5em;
+}
+
+.contenedor .ingresar {
+  padding-top: 1em;
+}
+
+.contenedor #ingresar {
+  padding-top: 1em;
+  padding: 0.7em;
+  background: #3e4684;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 1.1em;
+}
+
+.contenedor .footer {
+  padding-top: 1em;
+  display: flex;
+  font-size: 1.1em;
+  color: #5e5e5e;
+  gap: 8em;
+  padding-bottom: 1.5em;
+}
+
+.contenedor p{
+  text-align: center; 
+  color: red;
+  word-wrap: break-word;
+}
+
+.contenedor .footer span {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
