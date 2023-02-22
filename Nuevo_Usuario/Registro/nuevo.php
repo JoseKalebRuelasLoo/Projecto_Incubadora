@@ -2,15 +2,16 @@
 session_start();
 require_once('../../ConexionBD/Conexion.php');
 
-function sanitizar($DATOS = null){
-    foreach($DATOS as $llave =>$valor){
+function sanitizar($DATOS = null)
+{
+    foreach ($DATOS as $llave => $valor) {
         $DATOS[$llave] = strip_tags($valor);
     }
-
 }
 
 $error = 1;
 $mensaje = "Inicial";
+$aaa = "0";
 
 $datos_request = json_decode(file_get_contents("php://input"), true);
 
@@ -18,6 +19,7 @@ function validar($nombre, $apellido, $telefono, $domicilio, $ocupacion, $genero,
 {
     global $error;
     global $mensaje;
+    global $aaa;
     $error = 0;
     if ($nombre == "") {
         $error = 1;
@@ -100,6 +102,7 @@ if (isset($datos_request['pass']) && isset($datos_request['correo'])) {
 
                     $stmt->bindParam(':usuario', $correo);
                     $stmt->bindParam(':pass', $contraseña1);
+                    $aaa = "Aqui1";
                     $stmt->execute();
 
                     $stmt = $conn->prepare("SELECT * from clientes");
@@ -122,6 +125,7 @@ if (isset($datos_request['pass']) && isset($datos_request['correo'])) {
                     $stmt->bindParam(':Ocupacion', $ocupacion);
                     $stmt->bindParam(':Genero', $genero);
 
+                    $aaa = "Aqui2";
                     $stmt->execute();
 
                     $error = 0;
@@ -131,8 +135,8 @@ if (isset($datos_request['pass']) && isset($datos_request['correo'])) {
                     $msg = "<li>Error en la conexion, linea: " . $e->getLine() . " </li>";
                     $msg .= "<li>Script causante: " . $e->getFile() . "</li>";
                     $msg .= "<li>" . $e->getMessage() . "</li>";
-                    $error=3;
-                    $mensaje =$msg;
+                    $error = 3;
+                    $mensaje = $msg;
                     $conn->rollBack();
                 }
             } else {
@@ -149,6 +153,7 @@ if (isset($datos_request['pass']) && isset($datos_request['correo'])) {
 }
 
 $datos['error'] = $error;
+$datos['aaa'] = $aaa;
 $datos['mensaje'] = $mensaje;
 
 header('Content-Type: application/json; charset=utf8');
