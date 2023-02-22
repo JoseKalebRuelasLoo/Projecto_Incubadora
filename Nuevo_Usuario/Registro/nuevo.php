@@ -102,7 +102,6 @@ if (isset($datos_request['pass']) && isset($datos_request['correo'])) {
                     $stmt->bindParam(':pass', $contraseña1);
                     $stmt->execute();
 
-                    /*
                     $stmt = $conn->prepare("SELECT * from clientes");
                     $stmt->setFetchMode(PDO::FETCH_ASSOC);
                     $stmt->execute();
@@ -124,7 +123,7 @@ if (isset($datos_request['pass']) && isset($datos_request['correo'])) {
                     $stmt->bindParam(':Genero', $genero);
 
                     $stmt->execute();
-*/
+                    
                     $error = 0;
                     $mensaje = "Registro completo";
                     $conn->commit();
