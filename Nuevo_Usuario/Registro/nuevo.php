@@ -11,7 +11,6 @@ function sanitizar($DATOS = null)
 
 $error = 1;
 $mensaje = "Inicial";
-$aaa = "0";
 
 $datos_request = json_decode(file_get_contents("php://input"), true);
 
@@ -19,7 +18,6 @@ function validar($nombre, $apellido, $telefono, $domicilio, $ocupacion, $genero,
 {
     global $error;
     global $mensaje;
-    global $aaa;
     $error = 0;
     if ($nombre == "") {
         $error = 1;
@@ -102,9 +100,9 @@ if (isset($datos_request['pass']) && isset($datos_request['correo'])) {
 
                     $stmt->bindParam(':usuario', $correo);
                     $stmt->bindParam(':pass', $contraseña1);
-                    $aaa = "Aqui1";
                     $stmt->execute();
 
+                    /*
                     $stmt = $conn->prepare("SELECT * from clientes");
                     $stmt->setFetchMode(PDO::FETCH_ASSOC);
                     $stmt->execute();
@@ -125,9 +123,8 @@ if (isset($datos_request['pass']) && isset($datos_request['correo'])) {
                     $stmt->bindParam(':Ocupacion', $ocupacion);
                     $stmt->bindParam(':Genero', $genero);
 
-                    $aaa = "Aqui2";
                     $stmt->execute();
-
+*/
                     $error = 0;
                     $mensaje = "Registro completo";
                     $conn->commit();
