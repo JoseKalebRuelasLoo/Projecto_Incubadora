@@ -149,7 +149,6 @@ if (isset($datos_request['pass']) && isset($datos_request['correo'])) {
 }
 
 $datos['error'] = $error;
-$datos['aaa'] = $aaa;
 $datos['mensaje'] = $mensaje;
 
 header('Content-Type: application/json; charset=utf8');
