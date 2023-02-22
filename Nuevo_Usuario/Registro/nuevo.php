@@ -109,7 +109,7 @@ if (isset($datos_request['pass']) && isset($datos_request['correo'])) {
 
                     $count++;
 
-                    $Re_cliente = "INSERT INTO `valesprograweb`.`clientes` (`IdC`, `Nombre`, `Apellido`, `Correo`, `Tel`, `Dom`, `Ocupacion`, `Gen`, `Activo`) 
+                    $Re_cliente = "INSERT INTO `clientes` (`IdC`, `Nombre`, `Apellido`, `Correo`, `Tel`, `Dom`, `Ocupacion`, `Gen`, `Activo`) 
                     VALUES (:Id, :Nombre, :Apellido, :Correo, :Tel, :Dom, :Ocupacion, :Genero, '0')";
                     $stmt = $conn->prepare($Re_cliente);
 
@@ -123,7 +123,7 @@ if (isset($datos_request['pass']) && isset($datos_request['correo'])) {
                     $stmt->bindParam(':Genero', $genero);
 
                     $stmt->execute();
-                    
+
                     $error = 0;
                     $mensaje = "Registro completo";
                     $conn->commit();
