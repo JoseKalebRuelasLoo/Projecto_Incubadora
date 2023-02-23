@@ -38,7 +38,7 @@ window.addEventListener("load", function () {
                 }
                 if (error == 0) {
                     let url = datos.url;
-                    window.location = "../../Usuarios/" + url + "/algo.php";
+                    window.location = "Usuarios/" + url + "/algo.php";
                 }
 
             })

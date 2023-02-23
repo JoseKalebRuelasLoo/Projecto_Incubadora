@@ -30,7 +30,7 @@ window.addEventListener("load", function () {
 
 
     //Reinicia el formulario
-    //document.getElementById("formulario").reset();
+    document.getElementById("formulario").reset();
 
     // Se comprueba si los datos ingresados en los inputs estan vacios
     function validarDatos() {
