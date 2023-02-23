@@ -183,7 +183,7 @@ window.addEventListener("load", function () {
                         divCorreo.style.boxShadow = "0 0 0.1em red";
                         document.getElementById("msg").innerHTML = 'Ya se encuentra en uso el correo';
                     } else if (error == 0) {
-                        window.location = "Login.php";
+                        window.location = "../Login.html";
                     }
                 })
                 .catch(error => {

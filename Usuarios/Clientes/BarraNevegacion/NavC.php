@@ -3,21 +3,15 @@
 
 <head>
     <meta charset="utf-8" name="viewport" content="width=device-width">
-    <title>Iniciar sesion</title>
+    <title>NOMBRE DE LA PAGINA</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <nav class="menu-container">
-        <!-- burger menu -->
-        <input type="checkbox" aria-label="Toggle menu" />
-        <span></span>
-        <span></span>
-        <span></span>
-
         <!-- logo -->
         <a href="#" class="menu-logo">
-            <img src="Media/Logo.jpeg" />
+            <img src="Logo.jpeg" />
         </a>
 
         <!-- menu items -->
