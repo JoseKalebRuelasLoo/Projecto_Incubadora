@@ -24,7 +24,7 @@ body {
   }
   
   .menu-logo img {
-    max-height: 40px;
+    max-height: 60px;
     max-width: 100px;
     flex-shrink: 0;
   }
